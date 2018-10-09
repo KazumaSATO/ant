@@ -16,8 +16,7 @@ if(result)
 endif()
 
 # Prevent overriding the parent project's compiler/linker
-# settings on Windows
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+# settings on Windows set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 # Add googletest directly to our build. This defines
 # the gtest and gtest_main targets.
@@ -39,3 +38,4 @@ endif()
 
 add_executable(triangle triangle.cpp)
 target_link_libraries(triangle gtest_main)
+add_test(NAME triangle_test COMMAND triangle)
