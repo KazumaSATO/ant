@@ -31,10 +31,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-# Now simply link against gtest or gtest_main as needed. Eg
-# add_executable(example example.cpp)
-# target_link_libraries(example gtest_main)
-# add_test(NAME example_test COMMAND example)
 enable_testing()
 add_subdirectory(src)
-add_subdirectory(test)
+add_subdirectory(tests)
