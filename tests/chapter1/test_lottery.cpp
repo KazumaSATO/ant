@@ -1,5 +1,5 @@
 #include<iostream>
-#include "lottery.h"
+#include "chapter1/lottery.h"
 #include "gtest/gtest.h"
 
 TEST(LotteryTest, Sort) {

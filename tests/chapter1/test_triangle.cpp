@@ -1,5 +1,5 @@
 #include <iostream>
-#include "triangle.h"
+#include "chapter1/triangle.h"
 #include "gtest/gtest.h"
 
 

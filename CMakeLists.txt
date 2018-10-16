@@ -32,5 +32,5 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 enable_testing()
-add_subdirectory(src)
-add_subdirectory(tests)
+add_subdirectory(src/chapter1)
+add_subdirectory(tests/chapter1)
