@@ -34,3 +34,6 @@ endif()
 enable_testing()
 add_subdirectory(src/chapter1)
 add_subdirectory(tests/chapter1)
+
+add_subdirectory(src/chapter2)
+add_subdirectory(tests/chapter2)
