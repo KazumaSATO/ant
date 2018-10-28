@@ -10,6 +10,9 @@ target_link_libraries(TestSectionScheduling SectionScheduling gtest_main)
 add_executable(TestBestCowLine test_best_cow_line.cpp)
 target_link_libraries(TestBestCowLine BestCowLine gtest_main)
 
+add_executable(TestSaruman test_saruman.cpp)
+target_link_libraries(TestSaruman Saruman gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 gtest_discover_tests(TestPartialsum)
@@ -17,4 +20,4 @@ gtest_discover_tests(TestMaze)
 gtest_discover_tests(TestSectionScheduling)
 gtest_discover_tests(TestSectionScheduling)
 gtest_discover_tests(TestBestCowLine)
-
+gtest_discover_tests(TestSaruman)
