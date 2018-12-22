@@ -7,3 +7,5 @@ add_library(BestCowLine STATIC best_cow_line.cpp)
 add_library(Saruman STATIC saruman.cpp)
 add_library(FenceRepair STATIC fence_repair.cpp)
 add_library(FoodChain STATIC food_chain.cpp)
+add_library(Knapsack STATIC knapsack.cpp)
+

@@ -19,8 +19,12 @@ target_link_libraries(TestFenceRepair FenceRepair gtest_main)
 add_executable(TestFoodChain test_food_chain.cpp)
 target_link_libraries(TestFoodChain FoodChain gtest_main)
 
+add_executable(TestKnapsack test_knapsack.cpp)
+target_link_libraries(TestKnapsack Knapsack gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
+
 gtest_discover_tests(TestPartialsum)
 gtest_discover_tests(TestMaze)
 gtest_discover_tests(TestSectionScheduling)
@@ -29,3 +33,4 @@ gtest_discover_tests(TestBestCowLine)
 gtest_discover_tests(TestSaruman)
 gtest_discover_tests(TestFenceRepair)
 gtest_discover_tests(TestFoodChain)
+gtest_discover_tests(TestKnapsack)
