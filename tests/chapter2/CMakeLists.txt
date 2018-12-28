@@ -22,6 +22,9 @@ target_link_libraries(TestFoodChain FoodChain gtest_main)
 add_executable(TestKnapsack test_knapsack.cpp)
 target_link_libraries(TestKnapsack Knapsack gtest_main)
 
+add_executable(TestLcs test_lcs.cpp)
+target_link_libraries(TestLcs Lcs gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -34,3 +37,4 @@ gtest_discover_tests(TestSaruman)
 gtest_discover_tests(TestFenceRepair)
 gtest_discover_tests(TestFoodChain)
 gtest_discover_tests(TestKnapsack)
+gtest_discover_tests(TestLcs)
