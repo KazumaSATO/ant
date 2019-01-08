@@ -28,6 +28,9 @@ target_link_libraries(TestLcs Lcs gtest_main)
 add_executable(TestNoLimitKnapsack test_nlknapsack.cpp)
 target_link_libraries(TestNoLimitKnapsack NoLimitKnapsack gtest_main)
 
+add_executable(TestKnapsack2 test_knapsack2.cpp)
+target_link_libraries(TestKnapsack2 Knapsack2 gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -42,3 +45,4 @@ gtest_discover_tests(TestFoodChain)
 gtest_discover_tests(TestKnapsack)
 gtest_discover_tests(TestLcs)
 gtest_discover_tests(TestNoLimitKnapsack)
+gtest_discover_tests(TestKnapsack2)
