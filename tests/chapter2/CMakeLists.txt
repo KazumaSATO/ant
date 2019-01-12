@@ -3,7 +3,6 @@ target_link_libraries(TestPartialsum Partialsum gtest_main)
 
 add_executable(TestMaze test_maze.cpp)
 target_link_libraries(TestMaze Maze gtest_main)
-
 add_executable(TestSectionScheduling test_section_scheduling.cpp)
 target_link_libraries(TestSectionScheduling SectionScheduling gtest_main)
 
@@ -31,6 +30,9 @@ target_link_libraries(TestNoLimitKnapsack NoLimitKnapsack gtest_main)
 add_executable(TestKnapsack2 test_knapsack2.cpp)
 target_link_libraries(TestKnapsack2 Knapsack2 gtest_main)
 
+add_executable(TestNumLimitedPartialSum test_num_limited_partial_sum.cpp)
+target_link_libraries(TestNumLimitedPartialSum NumLimitedPartialSum gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -46,3 +48,4 @@ gtest_discover_tests(TestKnapsack)
 gtest_discover_tests(TestLcs)
 gtest_discover_tests(TestNoLimitKnapsack)
 gtest_discover_tests(TestKnapsack2)
+gtest_discover_tests(TestNumLimitedPartialSum)
