@@ -5,21 +5,29 @@
 #include "nlknapsack.h"
 
 int solve_nlknapsack(int n, int w[], int v[], int W) {
-  int vw[n+1][W+1];
+
+
+  int dp[n][W+1];
+
+  for(int j=0;j<W+1;j++) {
+    if(w[0] <= j) {
+      dp[0][j] = v[0];
+    } else {
+      dp[0][j] = 0;
+    }
+  }
 
   for(int i=0;i<n;i++) {
-    for(int j=0;j<n;j++) {
-      vw[i][j] = 0;
-    }
+    dp[i][0] = 0;
   }
 
-  for(int i=1;i<n+1;i++) {
+  for(int i=1;i<n;i++) {
     for(int j=1;j<W+1;j++) {
       if(j-w[i]>=0)
-        vw[i][j] = std::max(vw[i-1][j], vw[i][j-w[i]]+v[i]);
+        dp[i][j] = std::max(dp[i-1][j], dp[i][j-w[i]]+v[i]);
       else
-        vw[i][j] = vw[i-1][j];
+        dp[i][j] = dp[i-1][j];
     }
   }
-  return vw[n][W];
+  return dp[n-1][W];
 }
