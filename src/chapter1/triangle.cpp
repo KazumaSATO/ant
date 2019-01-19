@@ -11,7 +11,7 @@ int factorial(int n) {
 }
 
 int length(int array[]) {
-  return sizeof(array)/array[0];
+  return sizeof(array)/sizeof(*array);
 }
 
 bool is_trianglable(int e0, int e1, int e2) {

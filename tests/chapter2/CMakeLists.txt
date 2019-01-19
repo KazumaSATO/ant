@@ -36,6 +36,9 @@ target_link_libraries(TestNumLimitedPartialSum NumLimitedPartialSum gtest_main)
 add_executable(TestLis test_lis.cc)
 target_link_libraries(TestLis Lis gtest_main)
 
+add_executable(TestPartitionNum test_partition_num.cc)
+target_link_libraries(TestPartitionNum PartitionNum gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -53,3 +56,4 @@ gtest_discover_tests(TestNoLimitKnapsack)
 gtest_discover_tests(TestKnapsack2)
 gtest_discover_tests(TestNumLimitedPartialSum)
 gtest_discover_tests(TestLis)
+gtest_discover_tests(TestPartitionNum)
