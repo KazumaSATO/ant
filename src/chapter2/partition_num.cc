@@ -12,17 +12,10 @@ int solve_partition_num(int n, int m, int M) {
   for(int i=2;i<m+1;i++) {
     for(int j=0;j<n+1;j++) {
       if(j>=i) {
-        std::cout << "{" << i << "," << j << "}" << dp[i][j-1] << std::endl;
         dp[i][j] = dp[i][j-i] + dp[i-1][j];
       } else {
         dp[i][j] = dp[i-1][j];
       }
-    }
-  }
-
-  for(int i=0;i<m;i++) {
-    for(int j=0;j<n;j++) {
-      std::cout << "dp[" << i << "," << j << "]" << dp[i][j] << std::endl;
     }
   }
 

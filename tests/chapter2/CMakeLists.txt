@@ -3,6 +3,7 @@ target_link_libraries(TestPartialsum Partialsum gtest_main)
 
 add_executable(TestMaze test_maze.cpp)
 target_link_libraries(TestMaze Maze gtest_main)
+
 add_executable(TestSectionScheduling test_section_scheduling.cpp)
 target_link_libraries(TestSectionScheduling SectionScheduling gtest_main)
 
@@ -39,15 +40,17 @@ target_link_libraries(TestLis Lis gtest_main)
 add_executable(TestPartitionNum test_partition_num.cc)
 target_link_libraries(TestPartitionNum PartitionNum gtest_main)
 
+add_executable(TestMultiChoose test_multi_choose.cc)
+target_link_libraries(TestMultiChoose MultiChoose gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
 gtest_discover_tests(TestPartialsum)
-gtest_discover_tests(TestMaze)
-gtest_discover_tests(TestSectionScheduling)
-gtest_discover_tests(TestSectionScheduling)
 gtest_discover_tests(TestBestCowLine)
+gtest_discover_tests(TestMaze)
 gtest_discover_tests(TestSaruman)
+gtest_discover_tests(TestSectionScheduling)
 gtest_discover_tests(TestFenceRepair)
 gtest_discover_tests(TestFoodChain)
 gtest_discover_tests(TestKnapsack)
@@ -57,3 +60,4 @@ gtest_discover_tests(TestKnapsack2)
 gtest_discover_tests(TestNumLimitedPartialSum)
 gtest_discover_tests(TestLis)
 gtest_discover_tests(TestPartitionNum)
+gtest_discover_tests(TestMultiChoose)
