@@ -43,6 +43,9 @@ target_link_libraries(TestPartitionNum PartitionNum gtest_main)
 add_executable(TestMultiChoose test_multi_choose.cc)
 target_link_libraries(TestMultiChoose MultiChoose gtest_main)
 
+add_executable(TestTruck test_truck.cc)
+target_link_libraries(TestTruck Truck gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -61,3 +64,4 @@ gtest_discover_tests(TestNumLimitedPartialSum)
 gtest_discover_tests(TestLis)
 gtest_discover_tests(TestPartitionNum)
 gtest_discover_tests(TestMultiChoose)
+gtest_discover_tests(TestTruck)
