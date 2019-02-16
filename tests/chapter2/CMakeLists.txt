@@ -49,6 +49,9 @@ target_link_libraries(TestTruck Truck gtest_main)
 add_executable(TestBipartiteGraph test_bipartite_graph.cc)
 target_link_libraries(TestBipartiteGraph BipartiteGraph gtest_main)
 
+add_executable(TestRoadblocks test_roadblocks.cc)
+target_link_libraries(TestRoadblocks Roadblocks gtest_main)
+
 include_directories(${PROJECT_SOURCE_DIR}/src)
 include(GoogleTest)
 
@@ -69,3 +72,4 @@ gtest_discover_tests(TestPartitionNum)
 gtest_discover_tests(TestMultiChoose)
 gtest_discover_tests(TestTruck)
 gtest_discover_tests(TestBipartiteGraph)
+gtest_discover_tests(TestRoadblocks blocks)
